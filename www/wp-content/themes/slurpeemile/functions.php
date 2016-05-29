@@ -404,3 +404,9 @@ add_filter( 'get_the_archive_title', function ($title) {
   }
   return $title;
 });
+
+function print_echo($obj){
+   echo "<pre>";
+   print_r($obj);
+   echo "</pre>";
+}
