@@ -51,7 +51,7 @@
             array(
               'key'   => 'results_%_runner',
               'compare' => 'LIKE',
-              'value' => '"' . $runner_id . '"' // matches exaclty "123", not just 123. This prevents a match for "1234"
+              'value' =>  $runner_id
             )
           )
         );
