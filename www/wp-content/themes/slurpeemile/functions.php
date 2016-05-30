@@ -410,3 +410,19 @@ function print_echo($obj){
    print_r($obj);
    echo "</pre>";
 }
+
+function sort_runners_by_name( $query ) {
+	// exit out if it's the admin or it isn't the main query
+	if ( is_admin() || ! $query->is_main_query() ) {
+		return;
+	}
+
+	// order category archives by title in ascending order
+	if ( is_post_type_archive('runner') ) {
+         // Do stuff
+		$query->set( 'order' , 'asc' );
+		$query->set( 'orderby', 'title');
+		return;
+	}
+}
+add_action( 'pre_get_posts', 'sort_runners_by_name', 1 );
