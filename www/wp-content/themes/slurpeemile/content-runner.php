@@ -78,7 +78,8 @@
                     <?php if($runner->ID == $runner_id): ?>
                     <tr>
                       <td><a href="<?php the_permalink(); ?>"><?php the_field('year'); ?></a></td>
-                      <td><?php the_sub_field('position'); ?></td>
+                      <!-- <td><?php the_sub_field('position'); ?></td> -->
+                      <td><?php echo get_row_index(); ?></td>
                       <td><?php the_sub_field('time'); ?></td>
                     </tr>
                     <?php endif; ?>

@@ -52,7 +52,8 @@
         while ( have_rows('results') ) : the_row(); ?>
 
           <tr>
-            <td><?= the_sub_field('position');?></td>
+            <td><?= get_row_index();?></td>
+            <!-- <td><?= the_sub_field('position');?></td> -->
             <td><? $posts = get_sub_field('runner');
               if( $posts ): ?>
                 <?php foreach( $posts as $post): ?>

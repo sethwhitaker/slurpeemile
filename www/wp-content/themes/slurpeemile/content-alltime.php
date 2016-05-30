@@ -54,7 +54,8 @@
 
                 $alltime[$i]['year'] = get_field('year');
                 $alltime[$i]['year_permalink'] = get_the_permalink();
-                $alltime[$i]['position'] = get_sub_field('position');
+                $alltime[$i]['position'] = get_row_index();
+                // $alltime[$i]['position'] = get_sub_field('position');
                 $alltime[$i]['time'] = get_sub_field('time');
                 $alltime[$i]['time_ms'] = getMilliseconds(get_sub_field('time'));
 
