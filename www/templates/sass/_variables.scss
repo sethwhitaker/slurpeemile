@@ -1,0 +1,6 @@
+$sm: '768px';
+$md: '992px';
+$lg: '1200px';
+$small-up: 'screen and (min-width: #{$sm})';
+$medium-up: 'screen and (min-width: #{$md})';
+$large-up: 'screen and (min-width: #{$lg})';
